@@ -2,8 +2,8 @@
 <?php
     $alunos = 
     [
-        "Leila",
-        "Mário Gustavo"
+        "Leila Carolina Jarosz",
+        "Mário Gustavo Kreibich"
     ];
 ?>
 <head>
