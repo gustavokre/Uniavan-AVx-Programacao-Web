@@ -11,7 +11,8 @@
     <div class="justify-content-center">
         @include('nav');
         <div class="row justify-content-center" style="margin-top: 40px;">
-            <div class='col-lg-10 col-12'>
+            <div class='col-lg-10 col-12 text-center'>
+                <p class="h3" id='select_contador'>Pessoas Cadastradas: 0</p><br>
                 <table class="table table-striped table-dark">
                     <thead>
                         <tr>
@@ -27,10 +28,10 @@
                 </table>
             </div>
         </div>
-        
-        
+
         <div class="row justify-content-center" style="margin-top: 40px;">
-            <div class='col-lg-10 col-12'>
+            <div class='col-lg-10 col-12 text-center'>
+            <p class="h3">Cadastrar novas pessoas</p><br>
                 <table class="table table-striped table-dark">
                     <thead>
                         <tr>
@@ -63,6 +64,7 @@
                 .then((res) => {
                     if(res.status === 200)
                     {
+                        $('#select_contador').text( "Pessoas Cadastradas: " + res.data.length );
                         inserir_tabela(res.data);
                     }
                 });
@@ -120,9 +122,17 @@
                 .then((res) => {
                     if(res.status === 200)
                     {
+                        limpar_campos_inserir();
                         window.location.reload();
                     }
                 });
+        }
+
+        function limpar_campos_inserir()
+        {
+            $('#inserir_nome').val("")
+            $('#inserir_profissao').val("")
+            $('#inserir_idade').val("")
         }
     </script>
 
