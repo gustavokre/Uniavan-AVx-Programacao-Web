@@ -12,5 +12,8 @@
         <li class="nav-item">
             <a class="nav-link" href="/criptografia">Criptografia</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/pessoas">CRUD Pessoas</a>
+        </li>
     </ul>
 </nav>
