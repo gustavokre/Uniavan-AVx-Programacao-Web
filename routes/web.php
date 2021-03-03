@@ -24,25 +24,9 @@ Route::get('/grupo', function () {
     return view('grupo');
 });
 
-Route::get('/data', function () {
-    return view('data');
-});
-
-Route::get('/sobre', function () {
-    return view('sobre');
-});
-
-Route::get('/criptografia', function () {
-    return view('cripto');
-});
-
 Route::get('/pessoas', function () {
     return view('pessoas');
 });
-
-Route::get('api/data', [DataController::class, 'getData']);
-
-Route::post('api/cripto', [CriptoPasswordController::class, 'generateHash']);
 
 Route::post('api/pessoas', [CrudController::class, 'select']);
 
